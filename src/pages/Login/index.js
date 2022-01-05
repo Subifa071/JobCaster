@@ -2,7 +2,7 @@ import { Button, TextField } from "@mui/material";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 
-export default Login = () => {
+export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -29,7 +29,7 @@ export default Login = () => {
       />
       <TextField
         name='password'
-        value='password'
+        value={password}
         onChange={(e) => setPassword(e.target.password)}
       />
       <Button onClick={submit}>Login</Button>
